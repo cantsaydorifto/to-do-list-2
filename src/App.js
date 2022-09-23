@@ -1,4 +1,4 @@
-import React, { Fragment as Wrapper, useState, useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import ListCard from "./ListCard/ListCard";
 import Modal from "./Modal/Modal";
 import './App.css';
@@ -36,12 +36,12 @@ function App() {
   }
 
   return (
-    <Wrapper>
+    <>
       <h1>To Do List</h1>
       {modal ? <Modal addElem={pushUp} fun={removeModal} /> : null}
       <button onClick={AddItemHandler} className="AddItemButton">Add New Task</button>
       <ListCard taskHandler={completedTask} listArr={taskArr} />
-    </Wrapper>
+    </>
   );
 }
 
